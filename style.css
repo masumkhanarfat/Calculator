@@ -1,0 +1,132 @@
+:root {
+  --bg-clr: #F0EFF7;
+}
+
+.dark{
+  --bg-clr: #2B2C31;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.5s;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg-clr);
+}
+.wrapper{
+  position: relative;
+  width: 320px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+              -5px -5px 20px #fffb;
+}
+.dark .wrapper{
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25),
+              -15px -15px 20px rgba(255,255,255,0.1);
+}
+.dark-mode{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: #585659;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+  -5px -5px 20px ;
+}
+.dark .dark-mode{
+  border: 2px solid #000;
+  background: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+   -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+.wrapper .keys{
+  position: relative;
+  display: grid;
+}
+.wrapper .keys #value{
+  position: relative;
+  grid-column: span 4;
+  user-select: none;
+  overflow: none;
+  height: 100px;
+  line-height: 100px;
+  text-align: end;
+  border-radius: 5px;
+  padding-right: 20px;
+  box-shadow: inset -3px -3px 7px rgba(0,0,0,.1),
+              inset 2px 2px 5px rgba(94, 104, 121,0.288);
+}
+.dark .wrapper .keys #value{
+  color: #fff;
+}
+.dark .wrapper .keys #value{
+  box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.5),
+  inset -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+.wrapper .keys span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #edf1f4;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #666;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+               -5px -5px 20px #fff;
+}
+.dark .wrapper .keys span{
+  color: #eee;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
+              -5px -5px 10px rgba(255,255,255,.1);
+}
+.wrapper .keys span:active{
+  color: #f44336;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+              inset -5px -5px 10px #fff;
+}
+.dark .wrapper .keys span:active {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25),
+  inset -5px -5px 10px rgba(255, 255, 255, .1);
+}
+.wrapper .keys span[id="clear"]{
+  color: #fff;
+  background: #f00;
+  border: 1px solid #fff;
+  grid-column: span 2;
+}
+.wrapper .keys span[id="plus"] {
+  color: #fff;
+  background: #3ABC38;
+  border: 1px solid #fff;
+}
+.wrapper .keys span[id="equal"] {
+  color: #fff;
+  background: #2EA0F6;
+  border: 1px solid #fff;
+}
+.wrapper .keys span#clear:active,
+.wrapper .keys span#plus:active,
+.wrapper .keys span#equal:active
+{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+              -5px -5px 20px #fff,
+              inset 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
